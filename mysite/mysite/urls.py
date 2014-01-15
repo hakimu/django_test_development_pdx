@@ -1,9 +1,9 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import *
 
 from django.contrib import admin
 admin.autodiscover()
 
-from mysite.views import current_datetime
+from mysite.views import current_datetime, hours_ahead
 
 urlpatterns = patterns('',
 		(r'^time/$', current_datetime),
@@ -14,3 +14,10 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
 )
+
+# from django.conf.urls import patterns, url, include
+# from mysite.views import current_datetime
+
+# urlpatterns = patterns('', 
+# 		(r'^time/$', current_datetime),
+# 	)
